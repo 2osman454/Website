@@ -4,22 +4,37 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="author" content="Ikebek Peter">
     <meta name="description" content="the best tutors around">
     <meta http-equiv="refresh" content="">
     <meta name="keywords" content="best, tutor, math, sciences, chemistry, biology, physics">
-    <title>About Mwalimu</title>
+    <title>Mwalimu, The Super Tutor</title>
   </head>
 
-  <header>
-    <div class="navbar">
-      <div class="container">
-        <div class="Logo">
-        <a href="index.html"><img src="Logo10.PNG" width="" height="" align="left" alt="Customized Logo" class="Logo"></a>
+    <header>
+        <div class="navbar">
+          <div class="Logo"><a href="index.html"><img src="Logo Bg.jpg" width="" height="" align="left" alt="Customized Logo" class="Logo"></a></div>
+          <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="one.html">About</a></li>
+            <li><a href="two.html">Background</a></li>
+            <li><a href="three.html">Overview</a></li>
+            <li><a href="four.html">Impacts</a></li>
+            <li><a href="five.html">Brands</a></li>
+            <li><a href="six.html">Contact</a></li>
+          </ul>
+          <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
       </div>
-      <div class="navbar_links">
-        <ul class="menu">
+
+      <div class="dropdown_menu">
+        <ul class="link">
           <li><a href="index.html">Home</a></li>
           <li><a href="one.html">About</a></li>
           <li><a href="two.html">Background</a></li>
@@ -29,11 +44,9 @@
           <li><a href="six.html">Contact</a></li>
         </ul>
       </div>
-    </div>
-    </div>
-  </header>
+    </header>
 
-  <body>
+    <body>
       <section id="about">
         <div class="">
           <div>
@@ -76,10 +89,23 @@
         </div>
       </section>
 
-<br>
+      <script>
+        const toggleBtn = document.querySelector(' .toggle_btn')
+        const toggleBtnIcon = document.querySelector(' .toggle_btn i')
+        const dropDownMenu = document.querySelector(' .dropdown_menu')
+  
+        toggleBtn.onclick = function(){
+          dropDownMenu.classList.toggle('open')
+          const isOpen = dropDownMenu.classList.contains('open')
+  
+          toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark'
+          : 'fa-solid fa-bars'
+        }
+      </script>
 
-    <footer>
-      <h3>Copyright © 2022 isp</h3>
-</footer>
-  </body>
+      <br>
+
+      <footer><h3>Copyright © 2022 isp</h3></footer>
+    </body>
 </html>
